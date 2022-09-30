@@ -35,7 +35,7 @@ public class ModelTest {
 	@Test
 	public void isModelTest() throws Exception {
 		// modelにセットされているかのテスト
-		when(shainService.findByNo("100")).thenReturn("佐藤");
+		when(shainService.findByNo("200")).thenReturn("佐藤");
 		mockMvc.perform(post("/output?number=100"))
 				.andExpect(model().attribute("name", "佐藤"));
 	}
