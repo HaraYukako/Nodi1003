@@ -16,10 +16,10 @@ public class ShainServiceImplTest {
 
 	@Test
 	public void findByNoTest() throws Exception {
-//shainRepositoryをモックにして、findByNoが機能するか？のテスト
+		//shainRepositoryをモックにして、findByNoが機能するか？のテスト
 		when(shainRepository.selectByNo("100")).thenReturn("佐藤");
 		ShainService shainService = new ShainServiceImpl();
-		String employee = shainService.findByNo("100");
+		String employee = shainService.findByNo("200");
 		assertEquals(employee, "佐藤");
 	}
 
