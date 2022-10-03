@@ -39,17 +39,15 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<!--<version>${junit.version}</version>-->
+			<!-- <version>${junit.version}</version>-->
 			<scope>test</scope>
 		</dependency>
-		<!-- 追加始めり -->
 		<dependency>
 		<groupId>org.junit.platform</groupId>
 		<artifactId>junit-platform-runner</artifactId>
 		<version>1.2.0</version>
 		<scope>test</scope>
 		</dependency>
-		 <!-- 追加終わり -->
 		<dependency>
 			<groupId>org.easymock</groupId>
 			<artifactId>easymock</artifactId>
@@ -76,15 +74,18 @@
 		<groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M7</version>
-          <!-- 追加始めり
-          <dependencies>
-                <dependency>
-                    <groupId>org.apache.maven.surefire</groupId>
-                    <artifactId>surefire-junit-platform</artifactId>
-                    <version>3.0.0-M7</version>
-                </dependency>
-            </dependencies>
-             追加終わり -->
+                    <dependencies>
+               <dependency>
+                   <groupId>org.junit.platform</groupId>
+                   <artifactId>junit-platform-surefire-provider</artifactId>
+                   <version>1.2.0</version>
+               </dependency>
+           </dependencies>
+           <configuration>
+           	<additionalClasspathElements>
+           		<additionalClasspathElement>src/test/java/</additionalClasspathElement>
+           	</additionalClasspathElements>
+           </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
