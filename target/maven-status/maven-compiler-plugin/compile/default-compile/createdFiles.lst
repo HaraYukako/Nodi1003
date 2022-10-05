@@ -1,6 +1,7 @@
 com\example\demo\ShainRepositoryImpl.class
 com\example\demo\ShainServiceImpl.class
 com\example\demo\GroupRepository.class
+com\example\demo\Application.class
 com\example\demo\NoDiApplication.class
 com\example\demo\GroupForm.class
 com\example\demo\GroupServiceImpl.class
